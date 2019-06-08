@@ -1,0 +1,24 @@
+version: '3.2'
+
+services:
+  db:
+    image: postgres:11.3-alpine
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    stdin_open: true
+    tty: true
+
+  web:
+    build: .
+    command: mix phx.server
+    volumes:
+      - .:/app
+    ports:
+      - '4000:4000'
+    depends_on:
+      - db
+    stdin_open: true
+    tty: true
+
+volumes:
+  pg_data:
