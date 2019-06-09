@@ -20,7 +20,7 @@ defmodule TangosourceLibraryProject.MixProject do
   def application do
     [
       mod: {TangosourceLibraryProject.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :arc_ecto]
     ]
   end
 
@@ -33,10 +33,14 @@ defmodule TangosourceLibraryProject.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:arc, "~> 0.11.0"},
+      {:arc_ecto, "~> 0.11.1"},
       {:phoenix, "~> 1.4.6"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},
+      {:ecto_enum, "~> 1.2"},
       {:ecto_sql, "~> 3.0"},
+      {:ordinal, "~> 0.1.0"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},

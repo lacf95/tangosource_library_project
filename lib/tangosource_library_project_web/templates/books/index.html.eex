@@ -1,0 +1,36 @@
+<section class="phx-hero">
+  <h1><%= gettext "Books repository" %></h1>
+</section>
+<%= link(gettext("Share a Book With Us"), to: Routes.books_path(@conn, :new)) %>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= gettext "Title" %></th>
+      <th><%= gettext "Author(s)" %></th>
+      <th><%= gettext "ISBN" %></th>
+      <th><%= gettext "Edition" %></th>
+      <th><%= gettext "Published At" %></th>
+      <th><%= gettext "tags" %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <%= for book <- @books do %>
+    <tr>
+      <td>
+        <img src="<%= TangosourceLibraryProject.Book.cover_url(book, :thumb)%>" alt="<%= gettext("Book Cover Image For %{title}", title: book.title) %>">
+      </td>
+      <td><%= book.title %></td>
+      <td><%= book.author %></td>
+      <td><%= book.isbn %></td>
+      <td><%= ordinalize(book.edition) %></td>
+      <td><%= book.published_at %></td>
+      <td><%= book.tags %></td>
+      <td>
+        <%= link(gettext("Book Details"), to: Routes.books_path(@conn, :show, book)) %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

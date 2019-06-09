@@ -5,6 +5,7 @@ RUN apk add bash
 RUN apk add inotify-tools
 RUN apk add nodejs-current
 RUN apk add npm
+RUN apk add imagemagick
 
 ENV APP_PATH /app
 RUN mkdir -p $APP_PATH

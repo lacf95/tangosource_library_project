@@ -1,0 +1,36 @@
+<section>
+  <div>
+    <p>
+      <%= gettext("Created At %{inserted_at}", inserted_at: @book.inserted_at) %>
+      <%= gettext("Last Updated At %{updated_at}", updated_at: @book.updated_at) %>
+      <%= link(gettext("Edit This Book"), to: Routes.books_path(@conn, :edit, @book)) %>
+    </p>
+  </div>
+  <hr/>
+  <div>
+    <h1><%= @book.title %></h1>
+  </div>
+  <div>
+    <img src="<%= TangosourceLibraryProject.Book.cover_url(@book)%>" alt="<%= gettext("Book Cover Image For %{title}", title: @book.title) %>">
+  </div>
+  <div>
+    <h3><%= gettext("By %{author}", author: @book.author) %></h3>
+  </div>
+  <div>
+    <p><%= gettext("ISBN %{isbn}", isbn: @book.isbn) %></p>
+  </div>
+  <div>
+    <p><%= gettext("%{edition} Edition", edition: ordinalize(@book.edition)) %></p>
+  </div>
+  <div>
+    <p><%= gettext("Published At %{published_at}", published_at: @book.published_at) %></p>
+  </div>
+  <div>
+    <h5><%= gettext("Summary") %></h5>
+    <p><%= @book.summary %></p>
+  </div>
+  <div>
+    <p><%= @book.tags %></p>
+  </div>
+  <%= link gettext("Back to the Books List"), to: Routes.books_path(@conn, :index) %>
+</section>
