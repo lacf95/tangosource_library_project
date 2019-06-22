@@ -1,4 +1,4 @@
-defmodule TangosourceLibraryProject.CoverUploader do
+defmodule TangosourceLibraryProject.BookCoverUploader do
   use Arc.Definition
   use Arc.Ecto.Definition
 
@@ -13,6 +13,14 @@ defmodule TangosourceLibraryProject.CoverUploader do
   end
 
   def filename(version, {_file, scope}) do
-    "#{version}_#{scope.id}"
+    "#{version}_cover"
+  end
+
+  def storage_dir(_version, {_file, scope}) do
+    "uploads/#{model_name(scope)}/#{scope.id}"
+  end
+
+  def model_name(scope) do
+    scope.__meta__.source()
   end
 end

@@ -3,7 +3,7 @@ defmodule TangosourceLibraryProject.Book do
   use Arc.Ecto.Schema
   import Ecto.Changeset
 
-  alias TangosourceLibraryProject.{Book, CoverUploader, Repo}
+  alias TangosourceLibraryProject.{Book, BookCoverUploader, Repo}
 
   schema "books" do
     field :title, :string
@@ -13,7 +13,7 @@ defmodule TangosourceLibraryProject.Book do
     field :published_at, :date
     field :summary, :string
     field :tags, :string
-    field :cover, CoverUploader.Type
+    field :cover, BookCoverUploader.Type
 
     timestamps()
   end
@@ -72,6 +72,6 @@ defmodule TangosourceLibraryProject.Book do
   def all, do: Repo.all(Book)
 
   def cover_url(book, version \\ :original) do
-    CoverUploader.url({book.cover, book}, version)
+    BookCoverUploader.url({book.cover, book}, version)
   end
 end
