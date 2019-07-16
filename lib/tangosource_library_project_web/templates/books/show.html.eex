@@ -29,7 +29,7 @@
   <div>
     <h5><%= gettext("Summary") %></h5>
     <div>
-      <%= raw @book.summary %>
+      <%= TangosourceLibraryProjectWeb.SharedView.markdown_content @book.summary %>
     </div>
   </div>
   <div>
