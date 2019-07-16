@@ -5,4 +5,10 @@ defmodule TangosourceLibraryProjectWeb.BooksView do
   def ordinalize(number) do
     number |> Ordinal.ordinalize
   end
+
+  def tokenize(tags) when is_nil(tags), do: []
+
+  def tokenize(tags) when is_binary(tags) do
+    tags |> String.split(~r/,(\s)?/)
+  end
 end

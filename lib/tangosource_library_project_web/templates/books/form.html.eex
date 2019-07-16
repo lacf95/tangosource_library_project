@@ -26,8 +26,9 @@
   </div>
   <div>
     <%= label f, :summary %>
-    <%= textarea f, :summary, style: "resize: vertical;" %>
+    <%= textarea f, :summary, style: "resize: vertical; height: 40.0em;" %>
     <%= error_tag f, :summary %>
+    <%= render TangosourceLibraryProjectWeb.SharedView, "markdown_link.html" %>
   </div>
   <div>
     <%= label f, :cover %>
@@ -40,7 +41,7 @@
     <%= error_tag f, :tags %>
   </div>
   <div>
-    <%= link gettext("Cancel"), @cancel_action %>
+    <%= link gettext("Cancel"), to: @cancel_action %>
     <%= if assigns[:book] do %>
       <%= button gettext("Delete This Book"), to: Routes.books_path(@conn, :delete, @book), method: :delete, data: [confirm: "Are You Sure?"] %>
     <% end %>

@@ -1,4 +1,5 @@
 <section>
+  <%= link gettext("Back to the Books List"), to: Routes.books_path(@conn, :index) %>
   <div>
     <p>
       <%= gettext("Created At %{inserted_at}", inserted_at: @book.inserted_at) %>
@@ -27,10 +28,14 @@
   </div>
   <div>
     <h5><%= gettext("Summary") %></h5>
-    <p><%= @book.summary %></p>
+    <div>
+      <%= raw @book.summary %>
+    </div>
   </div>
   <div>
-    <p><%= @book.tags %></p>
+    <%= for tag <- tokenize(@book.tags) do %>
+      <span<%= tag %></span>
+    <% end %>
   </div>
   <%= link gettext("Back to the Books List"), to: Routes.books_path(@conn, :index) %>
 </section>

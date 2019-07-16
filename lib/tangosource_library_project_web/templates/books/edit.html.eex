@@ -1,2 +1,2 @@
 <h2><%= gettext "Edit %{title}", title: @book.title %></h2>
-<%= render "form.html", Map.merge(assigns, %{action: Routes.books_path(@conn, :update, @book), cancel_action: [to: Routes.books_path(@conn, :show, @book)]}) %>
+<%= render "form.html", Map.merge(assigns, %{action: Routes.books_path(@conn, :update, @book), cancel_action: Routes.books_path(@conn, :show, @book)}) %>

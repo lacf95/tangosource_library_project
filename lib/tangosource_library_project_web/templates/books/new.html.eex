@@ -1,2 +1,2 @@
 <h2><%= gettext "Create a New Book Entry" %></h2>
-<%= render "form.html", Map.merge(assigns, %{action: Routes.books_path(@conn, :create), cancel_action: [to: Routes.books_path(@conn, :index)]}) %>
+<%= render "form.html", Map.merge(assigns, %{action: Routes.books_path(@conn, :create), cancel_action: Routes.books_path(@conn, :index)}) %>

@@ -1,0 +1,1 @@
+<%= link("Markdown basic syntax", to: "https://www.markdownguide.org/basic-syntax/", target: "_blank") %>
