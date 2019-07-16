@@ -27,7 +27,7 @@ defmodule TangosourceLibraryProject.Book do
   end
 
   @doc false
-  def cover_changeset(book, attrs) do
+  def cover_changeset(book, attrs \\ %{}) do
     book
     |> cast_attachments(attrs, [:cover])
   end

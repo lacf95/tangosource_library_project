@@ -12,7 +12,7 @@ defmodule TangosourceLibraryProject.BookCoverUploader do
     {:convert, "-resize 200"}
   end
 
-  def filename(version, {_file, scope}) do
+  def filename(version, {_file, _scope}) do
     "#{version}_cover"
   end
 
