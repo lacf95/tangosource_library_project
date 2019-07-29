@@ -1,5 +1,7 @@
 <section>
   <%= link(gettext("Share a Book With Us"), to: Routes.books_path(@conn, :new)) %>
+  <%= pagination_links @page %> 
   <%= render "list.html", assigns |> Map.merge(%{books: @books}) %>
+  <%= pagination_links @page %> 
   <%= link(gettext("Share a Book With Us"), to: Routes.books_path(@conn, :new)) %>
 </section>

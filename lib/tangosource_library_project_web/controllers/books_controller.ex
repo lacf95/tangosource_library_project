@@ -1,11 +1,12 @@
 defmodule TangosourceLibraryProjectWeb.BooksController do
   use TangosourceLibraryProjectWeb, :controller
 
-  alias TangosourceLibraryProject.{Book}
+  alias TangosourceLibraryProject.{Book, Repo}
 
-  def index(conn, _params) do
-    books = Book.all()
-    render(conn, "index.html", books: books)
+  def index(conn, params) do
+    page = Book
+            |> Repo.paginate(params)
+    render(conn, "index.html", books: page.entries, page: page)
   end
 
   def new(conn, _params) do

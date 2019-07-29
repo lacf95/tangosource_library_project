@@ -1,5 +1,7 @@
 defmodule TangosourceLibraryProjectWeb.BooksView do
   use TangosourceLibraryProjectWeb, :view
+  import Scrivener.HTML
+
   require Ordinal
 
   def ordinalize(number) do

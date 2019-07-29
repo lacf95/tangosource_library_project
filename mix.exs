@@ -20,7 +20,7 @@ defmodule TangosourceLibraryProject.MixProject do
   def application do
     [
       mod: {TangosourceLibraryProject.Application, []},
-      extra_applications: [:logger, :runtime_tools, :arc_ecto]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -47,7 +47,9 @@ defmodule TangosourceLibraryProject.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:earmark, "~> 1.3"}
+      {:earmark, "~> 1.3"},
+      {:scrivener_ecto, "~> 2.2"},
+      {:scrivener_html, "~> 1.8"}
     ]
   end
 
