@@ -10,6 +10,7 @@ services:
 
   web:
     build: .
+    entrypoint: /app/docker-entrypoint.sh
     command: mix phx.server
     volumes:
       - .:/app

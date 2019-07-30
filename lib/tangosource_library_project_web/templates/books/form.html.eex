@@ -1,0 +1,50 @@
+<%= form_for @changeset, @action, [multipart: true], fn f -> %>
+  <div>
+    <%= label f, :title %>
+    <%= text_input f, :title %>
+    <%= error_tag f, :title %>
+  </div>
+  <div>
+    <%= label f, :author %>
+    <%= text_input f, :author %>
+    <%= error_tag f, :author %>
+  </div>
+  <div>
+    <%= label f, :isbn %>
+    <%= text_input f, :isbn %>
+    <%= error_tag f, :isbn %>
+  </div>
+  <div>
+    <%= label f, :edition %>
+    <%= number_input f, :edition %>
+    <%= error_tag f, :edition %>
+  </div>
+  <div>
+    <%= label f, :published_at %>
+    <%= date_select f, :published_at, year: [options: 1900..DateTime.utc_now.year] %>
+    <%= error_tag f, :published_at %>
+  </div>
+  <div>
+    <%= label f, :summary %>
+    <%= textarea f, :summary, style: "resize: vertical; height: 40.0em;" %>
+    <%= error_tag f, :summary %>
+    <%= render TangosourceLibraryProjectWeb.SharedView, "markdown_link.html" %>
+  </div>
+  <div>
+    <%= label f, :cover %>
+    <%= file_input f, :cover, accept: "image/png, image/jpeg, image/gif" %>
+    <%= error_tag f, :cover %>
+  </div>
+  <div>
+    <%= label f, :tags %>
+    <%= text_input f, :tags %>
+    <%= error_tag f, :tags %>
+  </div>
+  <div>
+    <%= link gettext("Cancel"), to: @cancel_action %>
+    <%= if assigns[:book] do %>
+      <%= button gettext("Delete This Book"), to: Routes.books_path(@conn, :delete, @book), method: :delete, data: [confirm: "Are You Sure?"] %>
+    <% end %>
+    <%= submit "Submit" %>
+  </div>
+<% end %>

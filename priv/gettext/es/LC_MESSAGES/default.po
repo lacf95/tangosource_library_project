@@ -1,0 +1,130 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: es\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:24
+msgid "%{edition} Edition"
+msgstr "%{edition} Edición"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:6
+msgid "Author(s)"
+msgstr "Autor(es)"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:2
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:40
+msgid "Back to the Books List"
+msgstr "Volver a la Lista de Libros"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:18
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:15
+msgid "Book Cover Image For %{title}"
+msgstr "Imagen de la Cubierta del Libro %{title}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:31
+msgid "Book Details"
+msgstr "Detalles del Libro"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:18
+msgid "By %{author}"
+msgstr "Por %{author}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/form.html.eex:44
+msgid "Cancel"
+msgstr "Cancelar"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/new.html.eex:1
+msgid "Create a New Book Entry"
+msgstr "Crear Nueva Entrada de Libro"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:5
+msgid "Created At %{inserted_at}"
+msgstr "Creado el %{inserted_at}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/form.html.eex:46
+msgid "Delete This Book"
+msgstr "Eliminar Este Libro"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/edit.html.eex:1
+msgid "Edit %{title}"
+msgstr "Editando %{title}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:7
+msgid "Edit This Book"
+msgstr "Edita Este Libro"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:8
+msgid "Edition"
+msgstr "Edición"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:7
+msgid "ISBN"
+msgstr "ISBN"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:21
+msgid "ISBN %{isbn}"
+msgstr "ISBN %{isbn}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:6
+msgid "Last Updated At %{updated_at}"
+msgstr "Última Actualización el %{updated_at}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:9
+msgid "Published At"
+msgstr "Publicado el"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:27
+msgid "Published At %{published_at}"
+msgstr "Publicado el %{published_at}"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/index.html.eex:2
+#: lib/tangosource_library_project_web/templates/books/index.html.eex:6
+msgid "Share a Book With Us"
+msgstr "Comparte un Libro Con Nosotros"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/show.html.eex:30
+msgid "Summary"
+msgstr "Resumen"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/layout/app.html.eex:14
+msgid "The TangoSource Library Project"
+msgstr "El Proyecto de Biblioteca de TangoSource"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:5
+msgid "Title"
+msgstr "Título"
+
+#, elixir-format
+#: lib/tangosource_library_project_web/templates/books/list.html.eex:10
+msgid "tags"
+msgstr "etiquetas"

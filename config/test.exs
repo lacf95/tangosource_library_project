@@ -3,9 +3,10 @@ use Mix.Config
 # Configure your database
 config :tangosource_library_project, TangosourceLibraryProject.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "",
   database: "tangosource_library_project_test",
-  hostname: "localhost",
+  hostname: "db",
+  show_sensitive_data_on_connection_error: true,
   pool: Ecto.Adapters.SQL.Sandbox
 
 # We don't run a server during test. If one is required,

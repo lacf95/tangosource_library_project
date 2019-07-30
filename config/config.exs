@@ -17,6 +17,8 @@ config :tangosource_library_project, TangosourceLibraryProjectWeb.Endpoint,
   render_errors: [view: TangosourceLibraryProjectWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: TangosourceLibraryProject.PubSub, adapter: Phoenix.PubSub.PG2]
 
+config :tangosource_library_project, TangosourceLibraryProject.Gettext, locales: ~w(en es)
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
@@ -24,6 +26,11 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+# Configures Arc local storage
+config :arc, storage: Arc.Storage.Local
+
+config :scrivener_html, routes_helper: TangosourceLibraryProjectWeb.Router.Helpers
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

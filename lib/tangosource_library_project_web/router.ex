@@ -16,11 +16,7 @@ defmodule TangosourceLibraryProjectWeb.Router do
   scope "/", TangosourceLibraryProjectWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", BooksController, :index
+    resources "/books", BooksController
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", TangosourceLibraryProjectWeb do
-  #   pipe_through :api
-  # end
 end
